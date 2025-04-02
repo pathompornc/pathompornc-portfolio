@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail, Twitter, BookOpen } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold gradient-text">John Doe</h3>
+            <h3 className="text-xl font-semibold gradient-text">Patt Chokchainant</h3>
             <p className="text-cream-200 max-w-xs">
               Product Manager specializing in AI/ML with 5 years experience in ecommerce and fintech.
             </p>
@@ -27,6 +27,9 @@ const Footer = () => {
               </a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-cream-300 hover:text-white transition-colors">
                 <Twitter className="h-5 w-5" />
+              </a>
+              <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" className="text-cream-300 hover:text-white transition-colors">
+                <BookOpen className="h-5 w-5" />
               </a>
               <a href="mailto:contact@example.com" className="text-cream-300 hover:text-white transition-colors">
                 <Mail className="h-5 w-5" />
@@ -47,7 +50,7 @@ const Footer = () => {
         
         <div className="border-t border-warm-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-cream-400 text-sm">
-            © {currentYear} John Doe. All rights reserved.
+            © {currentYear} Pathomporn Chokchainant. All rights reserved.
           </p>
           <p className="text-cream-400 text-sm mt-2 md:mt-0">
             Made with ❤️ in the Pacific Northwest

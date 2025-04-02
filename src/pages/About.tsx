@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Award, Briefcase, ExternalLink, Github, GraduationCap, Linkedin, Mail, MapPin, User } from 'lucide-react';
+import { Award, Briefcase, ExternalLink, Github, GraduationCap, Linkedin, Mail, MapPin, User, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const experiences = [
@@ -43,14 +43,12 @@ const education = [
   {
     institution: "Stanford University",
     degree: "M.S. in Computer Science, AI Specialization",
-    period: "2016 - 2018",
-    honors: "Graduated with Honors, GPA 3.9/4.0"
+    period: "2016 - 2018"
   },
   {
     institution: "University of California, Berkeley",
     degree: "B.S. in Computer Science and Business Administration",
-    period: "2012 - 2016",
-    honors: "Summa Cum Laude, GPA 3.85/4.0"
+    period: "2012 - 2016"
   }
 ];
 
@@ -85,13 +83,13 @@ const About = () => {
   return (
     <div className="min-h-screen pt-24 pb-16 bg-cream-50">
       <div className="container">
-        {/* Header Section - Photo and Profile side by side */}
+        {/* Header Section - Photo on right side of Profile */}
         <section className="mb-16">
-          <div className="md:flex md:items-center md:gap-12">
+          <div className="md:flex md:items-center md:gap-12 md:flex-row-reverse">
             <div className="md:w-1/3 mb-8 md:mb-0">
-              <div className="relative overflow-hidden rounded-2xl shadow-xl">
+              <div className="relative overflow-hidden rounded-2xl shadow-xl" style={{ aspectRatio: '2/3' }}>
                 <img
-                  className="w-full h-auto object-cover"
+                  className="w-full h-full object-cover"
                   src="/placeholder.svg"
                   alt="Profile"
                 />
@@ -100,7 +98,7 @@ const About = () => {
             </div>
             
             <div className="md:w-2/3">
-              <h1 className="text-3xl md:text-5xl font-bold mb-3 gradient-text">John Doe</h1>
+              <h1 className="text-3xl md:text-5xl font-bold mb-3 gradient-text">Patt Chokchainant</h1>
               <h2 className="text-xl text-warm-700 mb-6">Product Manager in AI/ML</h2>
               <p className="text-gray-700 mb-8 text-lg">
                 I create intelligent products that solve complex problems, with 5 years 
@@ -118,6 +116,11 @@ const About = () => {
                    className="flex items-center gap-2 text-warm-700 hover:text-warm-900 transition-colors">
                   <Github className="h-5 w-5" />
                   <span>GitHub</span>
+                </a>
+                <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" 
+                   className="flex items-center gap-2 text-warm-700 hover:text-warm-900 transition-colors">
+                  <BookOpen className="h-5 w-5" />
+                  <span>Google Scholar</span>
                 </a>
                 <a href="mailto:contact@example.com" 
                    className="flex items-center gap-2 text-warm-700 hover:text-warm-900 transition-colors">
@@ -206,10 +209,7 @@ const About = () => {
                   <div>
                     <h3 className="font-bold text-lg mb-1">{edu.institution}</h3>
                     <p className="text-gray-700 mb-2">{edu.degree}</p>
-                    <div className="flex flex-wrap items-center gap-4">
-                      <p className="text-gray-600">{edu.period}</p>
-                      <p className="text-warm-700 font-medium">{edu.honors}</p>
-                    </div>
+                    <p className="text-gray-600">{edu.period}</p>
                   </div>
                 </div>
               </div>

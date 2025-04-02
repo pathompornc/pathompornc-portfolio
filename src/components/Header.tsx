@@ -35,7 +35,7 @@ const Header = () => {
     }`}>
       <div className="container flex items-center justify-between py-4">
         <Link to="/" className="text-xl font-semibold">
-          <span className="gradient-text">John Doe</span>
+          <span className="gradient-text">Patt Chokchainant</span>
         </Link>
 
         {/* Desktop Navigation */}
