@@ -5,35 +5,35 @@
 
 @layer base {
   :root {
-    --background: 158 30% 98%;
-    --foreground: 222 47% 11%;
+    --background: 30 30% 97%;
+    --foreground: 27 30% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 27 30% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 27 30% 15%;
 
-    --primary: 160 45% 40%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 25 45% 45%;
+    --primary-foreground: 30 40% 98%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 30 30% 94%;
+    --secondary-foreground: 27 30% 15%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 30 30% 94%;
+    --muted-foreground: 25 10% 45%;
 
-    --accent: 220 70% 60%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 20 70% 60%;
+    --accent-foreground: 30 40% 98%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 30 40% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 222 84% 48%;
+    --border: 30 30% 90%;
+    --input: 30 30% 90%;
+    --ring: 27 40% 40%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
   }
 
   * {
@@ -54,17 +54,17 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-evergreen-600 to-navy-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-warm-600 to-cream-500 bg-clip-text text-transparent;
   }
 }
 
 @layer components {
   .nav-link {
-    @apply relative px-2 py-1 text-foreground hover:text-evergreen-600 transition-colors duration-200;
+    @apply relative px-2 py-1 text-foreground hover:text-warm-600 transition-colors duration-200;
   }
 
   .nav-link::after {
-    @apply content-[''] absolute left-0 bottom-0 w-0 h-0.5 bg-evergreen-500 transition-all duration-300;
+    @apply content-[''] absolute left-0 bottom-0 w-0 h-0.5 bg-warm-500 transition-all duration-300;
   }
 
   .nav-link:hover::after {
@@ -72,7 +72,7 @@
   }
 
   .nav-link.active {
-    @apply text-evergreen-600;
+    @apply text-warm-600;
   }
 
   .nav-link.active::after {
@@ -80,18 +80,18 @@
   }
 
   .project-card {
-    @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-gray-100;
+    @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-cream-100 hover:border-cream-200;
   }
 
   .btn-primary {
-    @apply bg-evergreen-600 text-white px-6 py-2 rounded-md hover:bg-evergreen-700 transition-colors duration-200;
+    @apply bg-warm-600 text-white px-6 py-2 rounded-full hover:bg-warm-700 transition-colors duration-200;
   }
 
   .btn-secondary {
-    @apply bg-navy-600 text-white px-6 py-2 rounded-md hover:bg-navy-700 transition-colors duration-200;
+    @apply bg-cream-500 text-white px-6 py-2 rounded-full hover:bg-cream-600 transition-colors duration-200;
   }
 
   .btn-outline {
-    @apply border border-evergreen-600 text-evergreen-600 px-6 py-2 rounded-md hover:bg-evergreen-50 transition-colors duration-200;
+    @apply border border-warm-600 text-warm-600 px-6 py-2 rounded-full hover:bg-warm-50 transition-colors duration-200;
   }
 }

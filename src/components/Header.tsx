@@ -31,7 +31,7 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white/90 backdrop-blur-sm shadow-sm' : 'bg-transparent'
+      scrolled ? 'bg-cream-50/90 backdrop-blur-sm shadow-sm' : 'bg-transparent'
     }`}>
       <div className="container flex items-center justify-between py-4">
         <Link to="/" className="text-xl font-semibold">
@@ -66,7 +66,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white">
+        <div className="md:hidden bg-cream-50 border-t border-cream-100">
           <nav className="container flex flex-col py-4 space-y-4">
             <Link 
               to="/" 
