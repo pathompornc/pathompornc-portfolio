@@ -44,21 +44,13 @@ const education = [
     institution: "Stanford University",
     degree: "M.S. in Computer Science, AI Specialization",
     period: "2016 - 2018",
-    achievements: [
-      "Research Assistant at Stanford AI Lab",
-      "Best Capstone Project Award for AI-powered financial advisor",
-      "President of Product Management Club"
-    ]
+    honors: "Graduated with Honors, GPA 3.9/4.0"
   },
   {
     institution: "University of California, Berkeley",
     degree: "B.S. in Computer Science and Business Administration",
     period: "2012 - 2016",
-    achievements: [
-      "Graduated with Honors, GPA 3.85/4.0",
-      "Member of Entrepreneurship Association",
-      "Founded campus tech innovation club"
-    ]
+    honors: "Summa Cum Laude, GPA 3.85/4.0"
   }
 ];
 
@@ -91,56 +83,61 @@ const certifications = [
 
 const About = () => {
   return (
-    <div className="min-h-screen pt-24 pb-16">
+    <div className="min-h-screen pt-24 pb-16 bg-cream-50">
       <div className="container">
-        {/* Header Section */}
+        {/* Header Section - Photo and Profile side by side */}
         <section className="mb-16">
-          <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
-            <div className="md:flex">
-              <div className="md:shrink-0 md:w-1/3">
+          <div className="md:flex md:items-center md:gap-12">
+            <div className="md:w-1/3 mb-8 md:mb-0">
+              <div className="relative overflow-hidden rounded-2xl shadow-xl">
                 <img
-                  className="h-48 w-full object-cover md:h-full"
+                  className="w-full h-auto object-cover"
                   src="/placeholder.svg"
                   alt="Profile"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-warm-900/50 to-transparent"></div>
               </div>
-              <div className="p-8 md:p-10 md:w-2/3">
-                <h1 className="text-3xl md:text-4xl font-bold mb-3 gradient-text">John Doe</h1>
-                <h2 className="text-xl text-gray-700 mb-4">Product Manager in AI/ML</h2>
-                <p className="text-gray-600 mb-6">
-                  I create intelligent products that solve complex problems, with 5 years 
-                  of experience across ecommerce and fintech. Currently focused on building 
-                  open-source AI ecosystems to democratize access to cutting-edge language technologies.
-                </p>
-                
-                <div className="flex flex-wrap gap-4 mb-6">
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-navy-600 hover:text-navy-800 transition-colors">
-                    <Linkedin className="h-5 w-5" />
-                    <span>LinkedIn</span>
-                  </a>
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-navy-600 hover:text-navy-800 transition-colors">
-                    <Github className="h-5 w-5" />
-                    <span>GitHub</span>
-                  </a>
-                  <a href="mailto:contact@example.com" className="flex items-center gap-2 text-navy-600 hover:text-navy-800 transition-colors">
-                    <Mail className="h-5 w-5" />
-                    <span>Email</span>
-                  </a>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <MapPin className="h-5 w-5" />
-                    <span>Seattle, WA</span>
-                  </div>
-                </div>
-                
-                <a 
-                  href="/resume.pdf" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="btn-primary inline-flex items-center gap-2"
-                >
-                  Download Resume <ExternalLink className="h-4 w-4" />
+            </div>
+            
+            <div className="md:w-2/3">
+              <h1 className="text-3xl md:text-5xl font-bold mb-3 gradient-text">John Doe</h1>
+              <h2 className="text-xl text-warm-700 mb-6">Product Manager in AI/ML</h2>
+              <p className="text-gray-700 mb-8 text-lg">
+                I create intelligent products that solve complex problems, with 5 years 
+                of experience across ecommerce and fintech. Currently focused on building 
+                open-source AI ecosystems to democratize access to cutting-edge language technologies.
+              </p>
+              
+              <div className="flex flex-wrap gap-5 mb-8">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" 
+                   className="flex items-center gap-2 text-warm-700 hover:text-warm-900 transition-colors">
+                  <Linkedin className="h-5 w-5" />
+                  <span>LinkedIn</span>
                 </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
+                   className="flex items-center gap-2 text-warm-700 hover:text-warm-900 transition-colors">
+                  <Github className="h-5 w-5" />
+                  <span>GitHub</span>
+                </a>
+                <a href="mailto:contact@example.com" 
+                   className="flex items-center gap-2 text-warm-700 hover:text-warm-900 transition-colors">
+                  <Mail className="h-5 w-5" />
+                  <span>Email</span>
+                </a>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <MapPin className="h-5 w-5" />
+                  <span>Seattle, WA</span>
+                </div>
               </div>
+              
+              <a 
+                href="/resume.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn-primary inline-flex items-center gap-2"
+              >
+                Download Resume <ExternalLink className="h-4 w-4" />
+              </a>
             </div>
           </div>
         </section>
@@ -150,9 +147,9 @@ const About = () => {
           <h2 className="section-title">Certifications</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {certifications.map((cert, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+              <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-cream-100 hover:shadow-md transition-shadow">
                 <div className="flex items-start gap-3">
-                  <Award className="h-6 w-6 text-evergreen-600 shrink-0 mt-1" />
+                  <Award className="h-6 w-6 text-cream-600 shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">{cert.name}</h3>
                     <p className="text-sm text-gray-600 mb-1">{cert.issuer}</p>
@@ -169,11 +166,11 @@ const About = () => {
           <h2 className="section-title">Work Experience</h2>
           <div className="space-y-8">
             {experiences.map((exp, index) => (
-              <div key={index} className="bg-white p-6 md:p-8 rounded-lg shadow-sm border border-gray-100">
-                <div className="flex flex-col md:flex-row md:items-start gap-4">
+              <div key={index} className="bg-white p-8 rounded-xl shadow-sm border-l-4 border-l-warm-600 hover:shadow-md transition-shadow">
+                <div className="flex flex-col md:flex-row md:items-start gap-6">
                   <div className="md:w-64 shrink-0">
                     <div className="flex items-center gap-3 mb-2">
-                      <Briefcase className="h-5 w-5 text-evergreen-600" />
+                      <Briefcase className="h-5 w-5 text-warm-600" />
                       <h3 className="font-bold text-lg">{exp.company}</h3>
                     </div>
                     <p className="text-gray-700 font-medium mb-1">{exp.position}</p>
@@ -183,10 +180,10 @@ const About = () => {
                     </p>
                   </div>
                   <div className="flex-1">
-                    <ul className="space-y-2">
+                    <ul className="space-y-3">
                       {exp.description.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <span className="inline-block w-1.5 h-1.5 rounded-full bg-evergreen-500 mt-2"></span>
+                        <li key={i} className="flex items-start gap-3">
+                          <span className="inline-block w-2 h-2 rounded-full bg-cream-500 mt-2"></span>
                           <span>{item}</span>
                         </li>
                       ))}
@@ -198,31 +195,21 @@ const About = () => {
           </div>
         </section>
         
-        {/* Education Section */}
+        {/* Education Section - Simplified */}
         <section className="mb-16">
           <h2 className="section-title">Education</h2>
-          <div className="space-y-8">
+          <div className="space-y-6">
             {education.map((edu, index) => (
-              <div key={index} className="bg-white p-6 md:p-8 rounded-lg shadow-sm border border-gray-100">
-                <div className="flex flex-col md:flex-row md:items-start gap-4">
-                  <div className="md:w-64 shrink-0">
-                    <div className="flex items-center gap-3 mb-2">
-                      <GraduationCap className="h-5 w-5 text-evergreen-600" />
-                      <h3 className="font-bold text-lg">{edu.institution}</h3>
+              <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-start gap-4">
+                  <GraduationCap className="h-6 w-6 text-warm-600 shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">{edu.institution}</h3>
+                    <p className="text-gray-700 mb-2">{edu.degree}</p>
+                    <div className="flex flex-wrap items-center gap-4">
+                      <p className="text-gray-600">{edu.period}</p>
+                      <p className="text-warm-700 font-medium">{edu.honors}</p>
                     </div>
-                    <p className="text-gray-700 font-medium mb-1">{edu.degree}</p>
-                    <p className="text-gray-600">{edu.period}</p>
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-gray-800 mb-2">Achievements & Activities</h4>
-                    <ul className="space-y-2">
-                      {edu.achievements.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <span className="inline-block w-1.5 h-1.5 rounded-full bg-evergreen-500 mt-2"></span>
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
                   </div>
                 </div>
               </div>
@@ -231,10 +218,10 @@ const About = () => {
         </section>
         
         {/* Beyond Work Section */}
-        <section className="bg-gray-50 rounded-xl p-8 md:p-10 text-center">
-          <User className="h-8 w-8 mx-auto mb-4 text-evergreen-600" />
+        <section className="bg-gradient-to-r from-warm-100 to-cream-100 rounded-xl p-10 text-center">
+          <User className="h-10 w-10 mx-auto mb-6 text-warm-600" />
           <h2 className="text-2xl font-bold mb-4">Beyond Work</h2>
-          <p className="text-gray-700 max-w-2xl mx-auto mb-6">
+          <p className="text-gray-700 max-w-2xl mx-auto mb-8 text-lg">
             When I'm not building products, I enjoy exploring the beautiful Pacific Northwest 
             through hiking and photography. I'm an avid traveler, always planning my next adventure 
             to experience new cultures and capture the beauty of our world.

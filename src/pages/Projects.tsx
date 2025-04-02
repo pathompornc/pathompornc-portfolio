@@ -1,6 +1,13 @@
 
 import React, { useState } from 'react';
 import { Calendar, ChevronLeft, ChevronRight, ExternalLink, Tag } from 'lucide-react';
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
 
 // Project data
 const projects = [
@@ -85,108 +92,93 @@ const projects = [
 ];
 
 const ProjectDetail = ({ project }: { project: typeof projects[0] }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % project.images.length);
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + project.images.length) % project.images.length);
-  };
-
   return (
-    <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100" id={project.id}>
-      <div className="grid grid-cols-1 md:grid-cols-2">
-        {/* Project Image Carousel */}
-        <div className="relative bg-gray-100 aspect-video">
-          <img
-            src={project.images[currentImageIndex]}
-            alt={`${project.title} screenshot ${currentImageIndex + 1}`}
-            className="w-full h-full object-cover"
-          />
-          
-          {/* Carousel Controls */}
-          <div className="absolute inset-0 flex items-center justify-between p-4">
-            <button 
-              onClick={prevImage} 
-              className="bg-white/80 rounded-full p-2 shadow-md hover:bg-white transition-colors"
-              aria-label="Previous image"
-            >
-              <ChevronLeft className="h-5 w-5 text-gray-700" />
-            </button>
-            <button 
-              onClick={nextImage} 
-              className="bg-white/80 rounded-full p-2 shadow-md hover:bg-white transition-colors"
-              aria-label="Next image"
-            >
-              <ChevronRight className="h-5 w-5 text-gray-700" />
-            </button>
-          </div>
-          
-          {/* Image Indicators */}
-          <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
-            {project.images.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentImageIndex(index)}
-                className={`w-2 h-2 rounded-full ${
-                  currentImageIndex === index ? 'bg-white' : 'bg-white/50'
-                }`}
-                aria-label={`Go to image ${index + 1}`}
-              />
-            ))}
-          </div>
-        </div>
+    <div className="group" id={project.id}>
+      <div className="relative mb-8">
+        <div className="absolute -inset-4 md:-inset-6 lg:-inset-8 bg-gradient-to-r from-warm-100/50 to-cream-100/50 rounded-3xl -z-10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
         
-        {/* Project Details */}
-        <div className="p-6 md:p-8">
-          <div className="flex justify-between items-start mb-4">
-            <h2 className="text-2xl font-bold text-gray-900">{project.title}</h2>
-            <img src={project.logo} alt={`${project.title} logo`} className="w-10 h-10 rounded-md object-contain bg-gray-50 p-1" />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* Project Images Carousel */}
+          <div className="overflow-hidden rounded-xl shadow-md">
+            <Carousel>
+              <CarouselContent>
+                {project.images.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="aspect-video relative overflow-hidden">
+                      <img 
+                        src={image} 
+                        alt={`${project.title} screenshot ${index + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-2 lg:left-4" />
+              <CarouselNext className="right-2 lg:right-4" />
+            </Carousel>
           </div>
           
-          <div className="flex items-center text-sm text-gray-500 mb-6">
-            <Calendar className="h-4 w-4 mr-1" />
-            <span>{project.date}</span>
-          </div>
-          
-          <div className="space-y-4 mb-6">
-            <div>
-              <h3 className="text-sm font-semibold text-gray-500 uppercase">Context</h3>
-              <p className="mt-1">{project.context}</p>
-            </div>
-            
-            <div>
-              <h3 className="text-sm font-semibold text-gray-500 uppercase">Problem</h3>
-              <p className="mt-1">{project.problem}</p>
-            </div>
-            
-            <div>
-              <h3 className="text-sm font-semibold text-gray-500 uppercase">Solution</h3>
-              <p className="mt-1">{project.solution}</p>
-            </div>
-            
-            <div>
-              <h3 className="text-sm font-semibold text-gray-500 uppercase">Results</h3>
-              <p className="mt-1">{project.results}</p>
-            </div>
-          </div>
-          
-          <div className="mb-6">
-            <h3 className="text-sm font-semibold text-gray-500 uppercase mb-2">Industry</h3>
-            <div className="text-sm text-gray-600">{project.industry}</div>
-          </div>
-          
+          {/* Project Details */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-500 uppercase mb-2">Skills & Technologies</h3>
-            <div className="flex flex-wrap gap-2">
-              {project.skills.map((skill, index) => (
-                <span key={index} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-evergreen-100 text-evergreen-800">
-                  <Tag className="h-3 w-3 mr-1" />
-                  {skill}
-                </span>
-              ))}
+            <div className="flex justify-between items-start mb-4">
+              <h2 className="text-3xl font-bold text-warm-800">{project.title}</h2>
+              <img 
+                src={project.logo} 
+                alt={`${project.title} logo`} 
+                className="w-12 h-12 rounded-md object-contain bg-white p-2 shadow-sm"
+              />
+            </div>
+            
+            <div className="flex items-center text-sm text-warm-600 mb-6">
+              <Calendar className="h-4 w-4 mr-2" />
+              <span>{project.date}</span>
+            </div>
+            
+            <div className="space-y-6 mb-6">
+              <div>
+                <h3 className="text-sm font-semibold text-cream-700 uppercase tracking-wider">Context</h3>
+                <p className="mt-2 text-gray-700">{project.context}</p>
+              </div>
+              
+              <div>
+                <h3 className="text-sm font-semibold text-cream-700 uppercase tracking-wider">Problem</h3>
+                <p className="mt-2 text-gray-700">{project.problem}</p>
+              </div>
+              
+              <div>
+                <h3 className="text-sm font-semibold text-cream-700 uppercase tracking-wider">Solution</h3>
+                <p className="mt-2 text-gray-700">{project.solution}</p>
+              </div>
+              
+              <div>
+                <h3 className="text-sm font-semibold text-cream-700 uppercase tracking-wider">Results</h3>
+                <p className="mt-2 text-gray-700">{project.results}</p>
+              </div>
+            </div>
+            
+            <div className="border-t border-cream-100 pt-6 mt-6">
+              <div className="flex flex-wrap gap-6">
+                <div>
+                  <h3 className="text-sm font-semibold text-cream-700 uppercase tracking-wider mb-2">Industry</h3>
+                  <div className="text-warm-700">{project.industry}</div>
+                </div>
+                
+                <div className="flex-1">
+                  <h3 className="text-sm font-semibold text-cream-700 uppercase tracking-wider mb-2">Skills & Technologies</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {project.skills.map((skill, index) => (
+                      <span 
+                        key={index} 
+                        className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-cream-100 text-warm-800"
+                      >
+                        <Tag className="h-3 w-3 mr-1" />
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -197,17 +189,17 @@ const ProjectDetail = ({ project }: { project: typeof projects[0] }) => {
 
 const Projects = () => {
   return (
-    <div className="min-h-screen pt-24 pb-16">
+    <div className="min-h-screen pt-24 pb-16 bg-cream-50">
       <div className="container">
-        <header className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">Projects</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <header className="text-center mb-20">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Projects</h1>
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
             A showcase of my work in AI/ML, fintech, and e-commerce, featuring products
             that solve complex problems and drive business results.
           </p>
         </header>
         
-        <div className="space-y-16">
+        <div className="space-y-24">
           {projects.map((project) => (
             <ProjectDetail key={project.id} project={project} />
           ))}
