@@ -1,6 +1,6 @@
 
-import React, { useState } from 'react';
-import { Calendar, ChevronLeft, ChevronRight, ExternalLink, Tag } from 'lucide-react';
+import React from 'react';
+import { Calendar, ExternalLink, Tag } from 'lucide-react';
 import { 
   Carousel,
   CarouselContent,
@@ -8,6 +8,9 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from "@/components/ui/carousel";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 
 // Project data
 const projects = [
@@ -91,99 +94,112 @@ const projects = [
   }
 ];
 
-const ProjectDetail = ({ project }: { project: typeof projects[0] }) => {
+const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
   return (
-    <div className="group" id={project.id}>
-      <div className="relative mb-8">
-        <div className="absolute -inset-4 md:-inset-6 lg:-inset-8 bg-gradient-to-r from-warm-100/50 to-cream-100/50 rounded-3xl -z-10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Project Images Carousel */}
-          <div className="overflow-hidden rounded-xl shadow-md">
-            <Carousel>
-              <CarouselContent>
-                {project.images.map((image, index) => (
-                  <CarouselItem key={index}>
-                    <div className="aspect-video relative overflow-hidden">
-                      <img 
-                        src={image} 
-                        alt={`${project.title} screenshot ${index + 1}`}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="left-2 lg:left-4" />
-              <CarouselNext className="right-2 lg:right-4" />
-            </Carousel>
-          </div>
+    <Card className="group h-full overflow-hidden border-cream-200 hover:border-cream-300 transition-all duration-300">
+      <CardHeader className="p-0">
+        <div className="relative">
+          <Carousel className="w-full">
+            <CarouselContent>
+              {project.images.map((image, index) => (
+                <CarouselItem key={index}>
+                  <div className="aspect-video relative overflow-hidden">
+                    <img 
+                      src={image} 
+                      alt={`${project.title} screenshot ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-2" />
+            <CarouselNext className="right-2" />
+          </Carousel>
           
-          {/* Project Details */}
-          <div>
-            <div className="flex justify-between items-start mb-4">
-              <h2 className="text-3xl font-bold text-warm-800">{project.title}</h2>
+          <div className="absolute top-3 right-3">
+            <div className="bg-white p-1.5 rounded-md shadow-sm">
               <img 
                 src={project.logo} 
                 alt={`${project.title} logo`} 
-                className="w-12 h-12 rounded-md object-contain bg-white p-2 shadow-sm"
+                className="w-8 h-8 object-contain"
               />
-            </div>
-            
-            <div className="flex items-center text-sm text-warm-600 mb-6">
-              <Calendar className="h-4 w-4 mr-2" />
-              <span>{project.date}</span>
-            </div>
-            
-            <div className="space-y-6 mb-6">
-              <div>
-                <h3 className="text-sm font-semibold text-cream-700 uppercase tracking-wider">Context</h3>
-                <p className="mt-2 text-gray-700">{project.context}</p>
-              </div>
-              
-              <div>
-                <h3 className="text-sm font-semibold text-cream-700 uppercase tracking-wider">Problem</h3>
-                <p className="mt-2 text-gray-700">{project.problem}</p>
-              </div>
-              
-              <div>
-                <h3 className="text-sm font-semibold text-cream-700 uppercase tracking-wider">Solution</h3>
-                <p className="mt-2 text-gray-700">{project.solution}</p>
-              </div>
-              
-              <div>
-                <h3 className="text-sm font-semibold text-cream-700 uppercase tracking-wider">Results</h3>
-                <p className="mt-2 text-gray-700">{project.results}</p>
-              </div>
-            </div>
-            
-            <div className="border-t border-cream-100 pt-6 mt-6">
-              <div className="flex flex-wrap gap-6">
-                <div>
-                  <h3 className="text-sm font-semibold text-cream-700 uppercase tracking-wider mb-2">Industry</h3>
-                  <div className="text-warm-700">{project.industry}</div>
-                </div>
-                
-                <div className="flex-1">
-                  <h3 className="text-sm font-semibold text-cream-700 uppercase tracking-wider mb-2">Skills & Technologies</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {project.skills.map((skill, index) => (
-                      <span 
-                        key={index} 
-                        className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-cream-100 text-warm-800"
-                      >
-                        <Tag className="h-3 w-3 mr-1" />
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </CardHeader>
+      
+      <CardContent className="p-6">
+        <div className="flex items-center text-sm text-warm-600 mb-2">
+          <Calendar className="h-4 w-4 mr-2" />
+          <span>{project.date}</span>
+        </div>
+        
+        <CardTitle className="text-2xl font-bold text-warm-800 mb-3">{project.title}</CardTitle>
+        <CardDescription className="text-gray-700 mb-2">{project.context}</CardDescription>
+        
+        <div className="mt-4 space-y-4">
+          <HoverCard>
+            <HoverCardTrigger asChild>
+              <button className="text-sm text-warm-700 hover:text-warm-800 underline font-medium">
+                View project details
+              </button>
+            </HoverCardTrigger>
+            <HoverCardContent className="w-80 p-4">
+              <div className="space-y-2">
+                <div>
+                  <h4 className="text-sm font-semibold text-warm-800">Problem</h4>
+                  <p className="text-sm text-gray-700">{project.problem}</p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-warm-800">Solution</h4>
+                  <p className="text-sm text-gray-700">{project.solution}</p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-warm-800">Results</h4>
+                  <p className="text-sm text-gray-700">{project.results}</p>
+                </div>
+              </div>
+            </HoverCardContent>
+          </HoverCard>
+        </div>
+      </CardContent>
+      
+      <CardFooter className="px-6 pb-6 pt-0 flex flex-col items-start">
+        <div className="w-full space-y-3">
+          <div>
+            <p className="text-xs text-cream-700 uppercase tracking-wider mb-1.5">Industry</p>
+            <div className="flex flex-wrap gap-1.5">
+              {project.industry.split(', ').map((industry, index) => (
+                <Badge 
+                  key={index} 
+                  variant="outline"
+                  className="bg-cream-50 text-warm-700 border-cream-200 hover:bg-cream-100"
+                >
+                  {industry}
+                </Badge>
+              ))}
+            </div>
+          </div>
+          
+          <div>
+            <p className="text-xs text-cream-700 uppercase tracking-wider mb-1.5">Skills & Technologies</p>
+            <div className="flex flex-wrap gap-1.5">
+              {project.skills.map((skill, index) => (
+                <Badge 
+                  key={index}
+                  variant="outline" 
+                  className="bg-warm-50 text-warm-700 border-warm-200 hover:bg-warm-100"
+                >
+                  <Tag className="h-3 w-3 mr-1 inline" />
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          </div>
+        </div>
+      </CardFooter>
+    </Card>
   );
 };
 
@@ -191,7 +207,7 @@ const Projects = () => {
   return (
     <div className="min-h-screen pt-24 pb-16 bg-cream-50">
       <div className="container">
-        <header className="text-center mb-20">
+        <header className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Projects</h1>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
             A showcase of my work in AI/ML, fintech, and e-commerce, featuring products
@@ -199,9 +215,9 @@ const Projects = () => {
           </p>
         </header>
         
-        <div className="space-y-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <ProjectDetail key={project.id} project={project} />
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </div>
