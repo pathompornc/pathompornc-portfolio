@@ -4,6 +4,7 @@ import { BookOpen, Github, Linkedin, Mail, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ExternalLink } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const ProfileSection: React.FC = () => {
   const isMobile = useIsMobile();
@@ -60,15 +61,16 @@ const ProfileSection: React.FC = () => {
       {/* Right Content - Profile Image - For desktop shown second, for mobile shown first */}
       <div className={`${isMobile ? 'order-1' : 'order-2'} w-full md:w-1/3 mb-0`}>
         <div className="relative overflow-hidden rounded-2xl shadow-xl mx-auto" style={{ 
-          aspectRatio: '3/2',
           maxWidth: isMobile ? '85%' : '100%'
         }}>
-          <img
-            className="w-full h-full object-cover"
-            src="/placeholder.svg"
-            alt="Profile"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-warm-900/50 to-transparent"></div>
+          <AspectRatio ratio={2/3} className="w-full">
+            <img
+              className="w-full h-full object-cover"
+              src="/placeholder.svg"
+              alt="Profile"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-warm-900/50 to-transparent"></div>
+          </AspectRatio>
         </div>
       </div>
     </div>
