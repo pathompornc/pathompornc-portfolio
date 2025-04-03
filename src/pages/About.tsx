@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
 
@@ -7,38 +6,34 @@ import CertificationsSection from '@/components/about/CertificationsSection';
 import ExperienceSection from '@/components/about/ExperienceSection';
 import EducationSection from '@/components/about/EducationSection';
 import BeyondWorkSection from '@/components/about/BeyondWorkSection';
+import StartupExperienceSection from '@/components/about/StartupExperienceSection';
 
 const certifications = [
   {
-    name: "AWS Certified Machine Learning - Specialty",
-    issuer: "Amazon Web Services",
-    date: "2023",
-    link: "#"
+    name: "PMP (Project Management Professional)",
+    issuer: "PMI (Project Management Institute)",
+    date: "2022 - Present",
+    link: "https://www.credly.com/badges/24d63ef5-45a4-408c-b62e-82202790696d"
   },
   {
-    name: "Professional Product Manager",
-    issuer: "Product School",
-    date: "2022",
-    link: "#"
+    name: "PMI-ACP (Agile Certified Practitioner)",
+    issuer: "PMI (Project Management Institute)",
+    date: "2022 - Present",
+    link: "https://www.credly.com/badges/869f628f-1c99-44bc-b56c-7213d87b10b6/public_url"
   },
   {
-    name: "Deep Learning Specialization",
-    issuer: "Coursera (Stanford)",
-    date: "2021",
-    link: "#"
-  },
-  {
-    name: "Certified Scrum Product Owner (CSPO)",
-    issuer: "Scrum Alliance",
-    date: "2020",
-    link: "#"
+    name: "CS50X (Introduction to Computer Science)",
+    issuer: "Harvard University",
+    date: "2025 - Present",
+    link: "placeholder"
   }
+
 ];
 
 const experiences = [
   {
-    company: "AI Innovation Labs",
-    position: "Senior Product Manager",
+    company: "SCB 10X",
+    position: "Senior Product Manager, AI",
     period: "2022 - Present",
     location: "Seattle, WA",
     description: [
@@ -48,7 +43,7 @@ const experiences = [
     ]
   },
   {
-    company: "FinTech Solutions Inc.",
+    company: "Finnomena",
     position: "Product Manager",
     period: "2020 - 2022",
     location: "San Francisco, CA",
@@ -59,8 +54,8 @@ const experiences = [
     ]
   },
   {
-    company: "E-commerce Innovations",
-    position: "Associate Product Manager",
+    company: "Sertis",
+    position: "AI Product Manager",
     period: "2018 - 2020",
     location: "New York, NY",
     description: [
@@ -71,16 +66,33 @@ const experiences = [
   }
 ];
 
+const startups = [
+  {
+    company: "TechStart Ventures",
+    position: "Co-founder & CTO",
+    period: "2017 - 2018",
+    location: "Bangkok, Thailand",
+    description: [
+      "Co-founded AI-powered recruitment platform connecting tech talent with startups",
+      "Built and scaled the MVP from 0 to 10,000 users in 6 months",
+      "Secured $500K seed funding from prominent angel investors",
+      "Led a team of 5 developers in building the core platform"
+    ]
+  }
+];
+
 const education = [
   {
-    institution: "Stanford University",
-    degree: "M.S. in Computer Science, AI Specialization",
-    period: "2016 - 2018"
+    institution: "University of Washington",
+    degree: "Master of Science in Information Management",
+    period: "2024 - 2025",
+    specialization: "Data Science and Machine Learning"
   },
   {
-    institution: "University of California, Berkeley",
-    degree: "B.S. in Computer Science and Business Administration",
-    period: "2012 - 2016"
+    institution: "Chulalongkorn University",
+    degree: "Bachelor of Science in Accounting and Finance",
+    period: "2015 - 2019",
+    specialization: "Financial Technology and Analytics"
   }
 ];
 
@@ -98,6 +110,9 @@ const About: React.FC = () => {
         
         {/* Work Experience Section */}
         <ExperienceSection experiences={experiences} />
+        
+        {/* Startup Experience Section */}
+        <StartupExperienceSection startups={startups} />
         
         {/* Education Section */}
         <EducationSection education={education} />
