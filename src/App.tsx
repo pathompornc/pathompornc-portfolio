@@ -1,14 +1,14 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import Home from '@/pages/Home';
-import About from '@/pages/About';
-import Projects from '@/pages/Projects';
-import ProjectDetails from '@/pages/projects/ProjectDetails';
-import Contact from '@/pages/Contact';
-import Blog from '@/pages/Blog';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import ProjectDetails from './pages/projects/ProjectDetails';
+import Contact from './pages/Contact';
+import Blog from './pages/Blog';
 
 const App: React.FC = () => {
   return (
