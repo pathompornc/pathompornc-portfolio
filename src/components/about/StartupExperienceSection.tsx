@@ -1,4 +1,5 @@
 import React from 'react';
+import { Rocket } from 'lucide-react';
 
 interface StartupExperience {
   company: string;
@@ -15,25 +16,24 @@ interface StartupExperienceSectionProps {
 const StartupExperienceSection: React.FC<StartupExperienceSectionProps> = ({ startups }) => {
   return (
     <section className="mb-16">
-      <h2 className="text-3xl font-bold mb-8">Startup Experience</h2>
-      <div className="space-y-8">
+      <h2 className="section-title">Startup Experience</h2>
+      <div className="space-y-6">
         {startups.map((startup, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-            <div className="flex justify-between items-start mb-4">
+          <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div className="flex items-start gap-4">
+              <Rocket className="h-6 w-6 text-warm-600 shrink-0 mt-1" />
               <div>
-                <h3 className="text-xl font-semibold">{startup.company}</h3>
-                <p className="text-gray-600">{startup.position}</p>
-              </div>
-              <div className="text-right">
-                <p className="text-gray-600">{startup.period}</p>
-                <p className="text-gray-600">{startup.location}</p>
+                <h3 className="font-bold text-lg mb-1">{startup.company}</h3>
+                <p className="text-gray-700 mb-2">{startup.position}</p>
+                <p className="text-gray-600 mb-2">{startup.period}</p>
+                <p className="text-gray-600 mb-2">{startup.location}</p>
+                <ul className="list-disc list-inside space-y-2">
+                  {startup.description.map((item, idx) => (
+                    <li key={idx} className="text-gray-700">{item}</li>
+                  ))}
+                </ul>
               </div>
             </div>
-            <ul className="list-disc list-inside space-y-2">
-              {startup.description.map((item, idx) => (
-                <li key={idx} className="text-gray-700">{item}</li>
-              ))}
-            </ul>
           </div>
         ))}
       </div>
