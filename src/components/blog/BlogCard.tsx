@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Calendar, Clock, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface BlogItem {
   id: number;
@@ -27,23 +28,27 @@ interface BlogCardProps {
 const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
   return (
     <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
-      <div className="relative aspect-video overflow-hidden">
-        <img 
-          src={blog.cover} 
-          alt={blog.title} 
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
-        />
-        <div className="absolute top-4 left-4 flex gap-2">
-          {blog.categories.map((category, index) => (
-            <span key={index} className="bg-white/90 backdrop-blur-sm text-xs font-semibold px-2 py-1 rounded-full">
-              {category}
-            </span>
-          ))}
+      <Link to={`/blog/${blog.id}`}>
+        <div className="relative aspect-video overflow-hidden">
+          <img 
+            src={blog.cover} 
+            alt={blog.title} 
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
+          />
+          <div className="absolute top-4 left-4 flex gap-2">
+            {blog.categories.map((category, index) => (
+              <span key={index} className="bg-white/90 backdrop-blur-sm text-xs font-semibold px-2 py-1 rounded-full">
+                {category}
+              </span>
+            ))}
+          </div>
         </div>
-      </div>
+      </Link>
       
       <div className="p-6">
-        <h3 className="text-xl font-bold mb-2">{blog.title}</h3>
+        <Link to={`/blog/${blog.id}`}>
+          <h3 className="text-xl font-bold mb-2 hover:text-evergreen-600 transition-colors">{blog.title}</h3>
+        </Link>
         
         <div className="flex flex-wrap gap-3 text-sm text-gray-600 mb-4">
           <div className="flex items-center">
@@ -69,9 +74,12 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
           <div className="text-sm">
             <span className="font-semibold">Estimated Cost:</span> {blog.cost}
           </div>
-          <button className="text-evergreen-600 font-medium flex items-center hover:text-evergreen-700 transition-colors">
+          <Link 
+            to={`/blog/${blog.id}`} 
+            className="text-evergreen-600 font-medium flex items-center hover:text-evergreen-700 transition-colors"
+          >
             Read More
-          </button>
+          </Link>
         </div>
       </div>
     </div>
