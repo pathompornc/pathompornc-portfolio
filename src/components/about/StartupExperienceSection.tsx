@@ -5,7 +5,6 @@ interface StartupExperience {
   company: string;
   position: string;
   period: string;
-  location: string;
   description: string[];
 }
 
@@ -26,7 +25,6 @@ const StartupExperienceSection: React.FC<StartupExperienceSectionProps> = ({ sta
                 <h3 className="font-bold text-lg mb-1">{startup.company}</h3>
                 <p className="text-gray-700 mb-2">{startup.position}</p>
                 <p className="text-gray-600 mb-2">{startup.period}</p>
-                <p className="text-gray-600 mb-2">{startup.location}</p>
                 <ul className="list-disc list-inside space-y-2">
                   {startup.description.map((item, idx) => (
                     <li key={idx} className="text-gray-700">{item}</li>

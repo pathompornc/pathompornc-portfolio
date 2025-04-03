@@ -13,29 +13,35 @@ const certifications = [
     name: "PMP (Project Management Professional)",
     issuer: "PMI (Project Management Institute)",
     date: "2022 - Present",
-    link: "https://www.credly.com/badges/24d63ef5-45a4-408c-b62e-82202790696d"
+    link: "https://www.credly.com/badges/24d63ef5-45a4-408c-b62e-82202790696d",
+    credentialId: "3247538"
   },
   {
     name: "PMI-ACP (Agile Certified Practitioner)",
     issuer: "PMI (Project Management Institute)",
     date: "2022 - Present",
-    link: "https://www.credly.com/badges/869f628f-1c99-44bc-b56c-7213d87b10b6/public_url"
+    link: "https://www.credly.com/badges/869f628f-1c99-44bc-b56c-7213d87b10b6/public_url",
+    credentialId: "3236038"
   },
   {
     name: "CS50X (Introduction to Computer Science)",
     issuer: "Harvard University",
-    date: "2025 - Present",
-    link: "placeholder"
+    date: "2025",
+    link: "placeholder",
+    credentialId: "CS50X-2025"
+  },
+  {
+    name: "Decentralized Finance (DeFi) and Blockchain Executive Course",
+    issuer: "Chulalongkorn Business School",
+    date: "2023"
   }
-
 ];
 
 const experiences = [
   {
     company: "SCB 10X",
     position: "Senior Product Manager, AI",
-    period: "2022 - Present",
-    location: "Seattle, WA",
+    period: "2022 - 2024",
     description: [
       "Leading development of Thai language LLM ecosystem including data collection, model training, and deployment platforms",
       "Launched AI-powered customer support solution for Thailand's largest bank, reducing response time by 45%",
@@ -45,8 +51,7 @@ const experiences = [
   {
     company: "Finnomena",
     position: "Product Manager",
-    period: "2020 - 2022",
-    location: "San Francisco, CA",
+    period: "2021 - 2022",
     description: [
       "Led development of ML-based investment optimization engine for wealth management platform",
       "Increased client retention by 35% and improved average portfolio performance by 12%",
@@ -56,8 +61,7 @@ const experiences = [
   {
     company: "Sertis",
     position: "AI Product Manager",
-    period: "2018 - 2020",
-    location: "New York, NY",
+    period: "2019 - 2021",
     description: [
       "Developed conversational AI chatbot for major retail chain with 14K+ branches nationwide",
       "Implemented product recommendation systems processing 13M+ daily transactions",
@@ -68,10 +72,9 @@ const experiences = [
 
 const startups = [
   {
-    company: "TechStart Ventures",
-    position: "Co-founder & CTO",
-    period: "2017 - 2018",
-    location: "Bangkok, Thailand",
+    company: "Speedboat Studio",
+    position: "Co-founder & Product Manager",
+    period: "2021 - 2023",
     description: [
       "Co-founded AI-powered recruitment platform connecting tech talent with startups",
       "Built and scaled the MVP from 0 to 10,000 users in 6 months",

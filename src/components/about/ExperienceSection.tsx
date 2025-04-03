@@ -1,12 +1,10 @@
-
 import React from 'react';
-import { Briefcase, MapPin } from 'lucide-react';
+import { Briefcase } from 'lucide-react';
 
 interface Experience {
   company: string;
   position: string;
   period: string;
-  location: string;
   description: string[];
 }
 
@@ -29,9 +27,6 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ experiences }) =>
                 </div>
                 <p className="text-gray-700 font-medium mb-1">{exp.position}</p>
                 <p className="text-gray-600 mb-1">{exp.period}</p>
-                <p className="text-gray-600 flex items-center gap-1">
-                  <MapPin className="h-4 w-4" /> {exp.location}
-                </p>
               </div>
               <div className="flex-1">
                 <ul className="space-y-3">
