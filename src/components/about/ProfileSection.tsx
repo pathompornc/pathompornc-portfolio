@@ -2,6 +2,7 @@
 import React from 'react';
 import { BookOpen, Github, Linkedin, Mail, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import ExternalLink from '@/components/ui/external-link';
 
 const ProfileSection: React.FC = () => {
   return (
