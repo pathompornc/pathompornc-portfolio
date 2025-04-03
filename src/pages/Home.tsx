@@ -47,7 +47,7 @@ const Home = () => {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in gradient-text">
-              John Doe
+              Patt Chokchainant
             </h1>
             <h2 className="text-2xl md:text-3xl text-gray-700 mb-6 animate-fade-in delay-100">
               Product Manager in AI/ML
