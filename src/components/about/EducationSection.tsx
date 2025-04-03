@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { GraduationCap } from 'lucide-react';
 
@@ -6,6 +5,7 @@ interface Education {
   institution: string;
   degree: string;
   period: string;
+  major: string;
 }
 
 interface EducationSectionProps {
@@ -24,7 +24,8 @@ const EducationSection: React.FC<EducationSectionProps> = ({ education }) => {
               <div>
                 <h3 className="font-bold text-lg mb-1">{edu.institution}</h3>
                 <p className="text-gray-700 mb-2">{edu.degree}</p>
-                <p className="text-gray-600">{edu.period}</p>
+                <p className="text-gray-600 mb-2">{edu.period}</p>
+                <p className="text-warm-600 font-medium">{edu.major}</p>
               </div>
             </div>
           </div>

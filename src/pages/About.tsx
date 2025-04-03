@@ -89,13 +89,13 @@ const education = [
     institution: "University of Washington",
     degree: "Master of Science in Information Management",
     period: "2024 - 2025",
-    specialization: "Data Science and Machine Learning"
+    major: "Data Science and AI"
   },
   {
     institution: "Chulalongkorn University",
-    degree: "Bachelor of Science in Accounting and Finance",
+    degree: "Bachelor of Science in Finance and Accounting",
     period: "2015 - 2019",
-    specialization: "Financial Technology and Analytics"
+    major: "Accounting Information Systems"
   }
 ];
 
