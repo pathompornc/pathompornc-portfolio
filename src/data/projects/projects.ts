@@ -9,7 +9,6 @@ export interface Project {
   industry: string;
   skills: string[];
   date: string;
-  logo: string;
 }
 
 export const projects: Project[] = [
@@ -24,7 +23,6 @@ export const projects: Project[] = [
     industry: "AI/ML, Financial Services",
     skills: ["LLM Fine-tuning", "RAG", "Data Collection", "API Development", "Salesforce Integration"],
     date: "Jan 2023 - Present",
-    logo: "/placeholder.svg",
   },
   {
     id: "prompthub",
@@ -37,7 +35,6 @@ export const projects: Project[] = [
     industry: "AI/ML, Marketplace",
     skills: ["Prompt Engineering", "UX/UI Design", "Marketplace Development", "Community Building"],
     date: "Mar 2022 - Dec 2022",
-    logo: "/placeholder.svg",
   },
   {
     id: "finnomena",
@@ -50,7 +47,6 @@ export const projects: Project[] = [
     industry: "FinTech, Wealth Management",
     skills: ["ML Algorithms", "Financial Analysis", "Portfolio Optimization", "User Research"],
     date: "Jun 2020 - Feb 2022",
-    logo: "/placeholder.svg",
   },
   {
     id: "conversational-ai",
@@ -63,7 +59,6 @@ export const projects: Project[] = [
     industry: "Retail, E-commerce",
     skills: ["Conversational AI", "NLP", "Omnichannel Integration", "Customer Experience"],
     date: "Jan 2019 - May 2020",
-    logo: "/placeholder.svg",
   },
   {
     id: "product-recommendation",
@@ -76,7 +71,6 @@ export const projects: Project[] = [
     industry: "E-commerce",
     skills: ["Recommendation Algorithms", "A/B Testing", "Data Analysis", "User Behavior Modeling"],
     date: "Mar 2018 - Dec 2018",
-    logo: "/placeholder.svg",
   },
   {
     id: "speedboat",
@@ -89,6 +83,5 @@ export const projects: Project[] = [
     industry: "Blockchain, Digital Art",
     skills: ["Blockchain", "NFT", "No-code Tools", "Creator Economy"],
     date: "Sep 2017 - Feb 2018",
-    logo: "https://drive.google.com/file/d/1xhiy14aG5SUnIoOruncifMomZBGy3_F7/view?usp=sharing",
   }
 ]; 
