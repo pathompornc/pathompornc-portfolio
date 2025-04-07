@@ -12,10 +12,10 @@ const HeroSection: React.FC = () => {
             Patt Chokchainant
           </h1>
           <h2 className="text-2xl md:text-3xl text-gray-700 mb-6 animate-fade-in delay-100">
-            AI/ML Product Manager
+            Product Manager / Program Manager
           </h2>
           <p className="text-lg text-gray-600 mb-8 animate-fade-up delay-200">
-            Bridging AI and ML into scalable, user-centric products with 5 years of experience in e-commerce and fintech
+            Bridging AI, ML, and LLM into scalable, user-centric products with 5 years of experience in e-commerce and fintech
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up delay-300">
             <Link to="/projects" className="btn-primary flex items-center justify-center gap-2">

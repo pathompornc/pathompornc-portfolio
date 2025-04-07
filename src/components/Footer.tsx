@@ -12,7 +12,8 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-semibold gradient-text">Patt Chokchainant</h3>
             <p className="text-cream-200 max-w-xs">
-              Product Manager specializing in AI/ML with 5 years experience in ecommerce and fintech.
+            I enjoy sharing and exchanging thoughts with diverse people and perspectives. Insights from different viewpoints often spark the best ideas.
+            Feel free to shoot me messages!
             </p>
           </div>
           
