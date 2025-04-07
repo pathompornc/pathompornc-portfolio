@@ -13,9 +13,9 @@ const BeyondWorkSection: React.FC = () => {
         through hiking and photography. I'm an avid traveler, always planning my next adventure 
         to experience new cultures and capture the beauty of our world.
       </p>
-      <Link to="/blog" className="btn-outline">
+      {/* <Link to="/blog" className="btn-outline">
         Read My Travel Blog
-      </Link>
+      </Link> */}
     </section>
   );
 };
