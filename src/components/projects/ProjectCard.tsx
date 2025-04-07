@@ -38,16 +38,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             <CarouselPrevious className="left-2" />
             <CarouselNext className="right-2" />
           </Carousel>
-          
-          <div className="absolute top-3 right-3">
-            <div className="bg-white p-1.5 rounded-md shadow-sm">
-              <img 
-                src={project.logo} 
-                alt={`${project.title} logo`} 
-                className="w-8 h-8 object-contain"
-              />
-            </div>
-          </div>
         </div>
       </CardHeader>
       
