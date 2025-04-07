@@ -14,12 +14,11 @@ const ProfileSection: React.FC = () => {
       {/* Left Content - For desktop shown first, for mobile shown second */}
       <div className={`${isMobile ? 'order-2 mt-6' : 'order-1'} md:w-2/3`}>
         <h1 className="text-3xl md:text-5xl font-bold mb-3 gradient-text">Patt Chokchainant</h1>
-        <h2 className="text-xl text-warm-700 mb-6">Product Manager in AI/ML</h2>
+        <h2 className="text-xl text-warm-700 mb-6">AI Product Manager</h2>
         <p className="text-gray-700 mb-8 text-lg">
           I build AI/ML products that solve complex problems and align business goals with user needs.
-          With a blend of strategic thinking and hands-on execution, I craft product strategies, 
-          collaborate with cross-functional teams to prioritize impactful features, streamline operations, 
-          and turn user insights into clear, actionable roadmaps.
+          With 5 year of experience, I craft product strategies and collaborate with cross-functional teams 
+          to prioritize impactful features, streamline operations, and turn user insights into actionable roadmaps.
         </p>
         
         <div className="flex flex-wrap gap-5 mb-8">
