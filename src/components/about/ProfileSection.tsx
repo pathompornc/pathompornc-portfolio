@@ -16,9 +16,10 @@ const ProfileSection: React.FC = () => {
         <h1 className="text-3xl md:text-5xl font-bold mb-3 gradient-text">Patt Chokchainant</h1>
         <h2 className="text-xl text-warm-700 mb-6">Product Manager in AI/ML</h2>
         <p className="text-gray-700 mb-8 text-lg">
-          I create intelligent products that solve complex problems, with 5 years 
-          of experience across ecommerce and fintech. Currently focused on building 
-          open-source AI ecosystems to democratize access to cutting-edge language technologies.
+          I build AI/ML products that solve complex problems and align business goals with user needs.
+          With a blend of strategic thinking and hands-on execution, I craft product strategies, 
+          collaborate with cross-functional teams to prioritize impactful features, streamline operations, 
+          and turn user insights into clear, actionable roadmaps.
         </p>
         
         <div className="flex flex-wrap gap-5 mb-8">
