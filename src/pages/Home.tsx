@@ -31,13 +31,19 @@ const Home: React.FC = () => {
 
   const skills = [
     "Product Management", 
-    "Machine Learning", 
-    "Artificial Intelligence", 
-    "Data Analytics", 
-    "UX/UI Design", 
+    "Product Strategy and Roadmapping",
+    "Feature Prioritization",
+    "Market Research and Competitive Analysis",
+    "User Research",
+    "Project Management",
     "Agile Methodologies",
-    "Financial Technology", 
-    "E-commerce",
+    "Scrum",
+    "Project Management",
+    "Process Improvement",
+    "AI / Generative AI",
+    "Machine Learning", 
+    "Data Science",
+    "UX/UI Design", 
     "Enterprise Solutions"
   ];
 
