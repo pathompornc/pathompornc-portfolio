@@ -16,9 +16,9 @@ const ProfileSection: React.FC = () => {
         <h1 className="text-3xl md:text-5xl font-bold mb-3 gradient-text">Patt Chokchainant</h1>
         <h2 className="text-xl text-warm-700 mb-6">AI Product Manager</h2>
         <p className="text-gray-700 mb-8 text-lg">
-          I build AI/ML products that solve complex problems and align business goals with user needs.
-          With 5 year of experience, I craft product strategies and collaborate with cross-functional teams 
-          to prioritize impactful features, streamline operations, and turn user insights into actionable roadmaps.
+          AI Product Manager with 5+ years of experience driving B2B SaaS products, specializing in LLM 
+          across e-commerce and FinTech. Delivered scalable solutions impacting 16M+ users and secured $3M+ in funding. 
+          Proven ability to lead cross-functional teams, define product strategy, and bring products from 0 to 1.
         </p>
         
         <div className="flex flex-wrap gap-5 mb-8">
