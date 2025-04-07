@@ -40,10 +40,10 @@ const Home: React.FC = () => {
     "Scrum",
     "Project Management",
     "Process Improvement",
-    "AI / Generative AI",
-    "Machine Learning", 
-    "Data Science",
-    "UX/UI Design", 
+    "Data Analytics",
+    "SQL",
+    "Python",
+    "Excel",
     "Enterprise Solutions"
   ];
 
