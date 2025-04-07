@@ -89,6 +89,6 @@ export const projects: Project[] = [
     industry: "Blockchain, Digital Art",
     skills: ["Blockchain", "NFT", "No-code Tools", "Creator Economy"],
     date: "Sep 2017 - Feb 2018",
-    logo: "/placeholder.svg",
+    logo: "https://drive.google.com/file/d/1xhiy14aG5SUnIoOruncifMomZBGy3_F7/view?usp=sharing",
   }
 ]; 
