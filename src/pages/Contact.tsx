@@ -45,13 +45,13 @@ const Contact: React.FC = () => {
               <div className="pt-4">
                 <h3 className="font-medium text-warm-900 mb-2">Connect Online</h3>
                 <div className="flex space-x-4">
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-navy-600 hover:text-navy-800 transition-colors">
+                  <a href="https://linkedin.com/in/pathompornc" target="_blank" rel="noopener noreferrer" className="text-navy-600 hover:text-navy-800 transition-colors">
                     LinkedIn
                   </a>
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-navy-600 hover:text-navy-800 transition-colors">
+                  <a href="https://github.com/pathompornc" target="_blank" rel="noopener noreferrer" className="text-navy-600 hover:text-navy-800 transition-colors">
                     GitHub
                   </a>
-                  <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" className="text-navy-600 hover:text-navy-800 transition-colors">
+                  <a href="https://scholar.google.com/citations?user=6nkUwdAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="text-navy-600 hover:text-navy-800 transition-colors">
                     Google Scholar
                   </a>
                 </div>

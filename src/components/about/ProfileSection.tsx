@@ -22,22 +22,22 @@ const ProfileSection: React.FC = () => {
         </p>
         
         <div className="flex flex-wrap gap-5 mb-8">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" 
+          <a href="https://linkedin.com/in/pathompornc" target="_blank" rel="noopener noreferrer" 
              className="flex items-center gap-2 text-warm-700 hover:text-warm-900 transition-colors">
             <Linkedin className="h-5 w-5" />
             <span>LinkedIn</span>
           </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
+          <a href="https://github.com/pathompornc" target="_blank" rel="noopener noreferrer" 
              className="flex items-center gap-2 text-warm-700 hover:text-warm-900 transition-colors">
             <Github className="h-5 w-5" />
             <span>GitHub</span>
           </a>
-          <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" 
+          <a href="https://scholar.google.com/citations?user=6nkUwdAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" 
              className="flex items-center gap-2 text-warm-700 hover:text-warm-900 transition-colors">
             <BookOpen className="h-5 w-5" />
             <span>Google Scholar</span>
           </a>
-          <a href="mailto:contact@example.com" 
+          <a href="mailto:ch.pathomporn@gmail.com" 
              className="flex items-center gap-2 text-warm-700 hover:text-warm-900 transition-colors">
             <Mail className="h-5 w-5" />
             <span>Email</span>
@@ -49,7 +49,7 @@ const ProfileSection: React.FC = () => {
         </div>
         
         <a 
-          href="/resume.pdf" 
+          href="https://drive.google.com/file/d/1M-FWoRhUxhq5RUOvSpePOJnlJLVQI4Df/view?usp=drive_link" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="btn-primary inline-flex items-center gap-2"
