@@ -19,7 +19,7 @@ export const projects: Project[] = [
     problem: "Thai language AI models lagged behind English counterparts with limited high-quality training data and tools.",
     solution: "Developed comprehensive ecosystem from data collection to deployment platforms.",
     results: "Created Thailand's largest open-source language model ecosystem, now used by the country's largest bank for customer support.",
-    images: ["src/assets/images/typhoon-logo.png"],
+    images: ["public/typhoon-logo.png"],
     industry: "AI/ML, Financial Services",
     skills: ["LLM Fine-tuning", "RAG", "Data Collection", "API Development", "Salesforce Integration"],
     date: "Jan 2023 - Present",
