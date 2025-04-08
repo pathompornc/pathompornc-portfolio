@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-xl text-cream-400 font-semibold">Patt Chokchainant</h3>
             <p className="text-cream-200 max-w-xs">
-            I enjoy sharing and exchanging thoughts with diverse people and perspectives. Insights from different viewpoints often spark the best ideas.
+            I enjoy sharing and exchanging thoughts with people. Insights from different viewpoints often spark the best ideas.
             Feel free to shoot me messages!
             </p>
           </div>
