@@ -95,11 +95,6 @@ const ProjectDetails: React.FC = () => {
               </div>
 
               <div>
-                <h2 className="text-xl font-semibold text-warm-800 mb-2">Team Composition</h2>
-                <p className="text-gray-700">{project.teamComposition}</p>
-              </div>
-
-              <div>
                 <h2 className="text-xl font-semibold text-warm-800 mb-2">Impact</h2>
                 <ul className="list-disc pl-5 text-gray-700">
                   {project.impact.map((item, idx) => (
