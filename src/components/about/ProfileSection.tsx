@@ -76,7 +76,6 @@ const ProfileSection: React.FC = () => {
               onError={handleImageError}
               alt="Profile"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-warm-900/50 to-transparent"></div>
           </AspectRatio>
         </div>
       </div>
