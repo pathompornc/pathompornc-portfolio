@@ -55,7 +55,7 @@ export const projects: Project[] = [
     ],
     toolsMethods: ["LLM Fine-tuning", "RAG", "Salesforce Integration"],
     industry: "AI/ML, Financial Services",
-    images: ["/placeholder.svg"],
+    images: ["/images/rag-logo.png"],
     date: "Jan - Jun 2024",
   },
   {
@@ -140,7 +140,7 @@ export const projects: Project[] = [
     ],
     toolsMethods: ["Conversational AI", "NLP", "Omnichannel Integration", "Customer Experience"],
     industry: "E-commerce, Retail",
-    images: ["/placeholder.svg"],
+    images: ["/images/product-recs-logo.png"],
     date: "Oct 2019 - Jul 2021",
   },
   {
@@ -160,7 +160,7 @@ export const projects: Project[] = [
     ],
     toolsMethods: ["Recommendation System", "A/B Testing", "Data Science", "User Behavior Modeling"],
     industry: "E-commerce, Retail",
-    images: ["/placeholder.svg"],
+    images: ["/images/product-recs-logo.png"],
     date: "Oct 2019 - Jul 2021",
   },
   {
