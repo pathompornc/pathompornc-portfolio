@@ -72,7 +72,7 @@ const ProfileSection: React.FC = () => {
           <AspectRatio ratio={2/3} className="w-full">
             <img
               className="w-full h-full object-cover"
-              src="/placeholder.svg"
+              src="/images/profile-professional.jpg"
               onError={handleImageError}
               alt="Profile"
             />

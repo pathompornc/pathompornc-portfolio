@@ -43,9 +43,8 @@ const experiences = [
     position: "Senior Product Manager, AI",
     period: "2022 - 2024",
     description: [
-      "Leading development of Thai language LLM ecosystem including data collection, model training, and deployment platforms",
-      "Launched AI-powered customer support solution for Thailand's largest bank, reducing response time by 45%",
-      "Managing cross-functional team of engineers, data scientists, and designers across 3 countries"
+      "Leading development of Thai language LLM ecosystem including data collection, model training, and developer platforms",
+      "Launched AI-powered customer support solution for Thailand's largest bank, reducing response time by 40%"
     ]
   },
   {
@@ -54,8 +53,8 @@ const experiences = [
     period: "2021 - 2022",
     description: [
       "Led development of ML-based investment optimization engine for wealth management platform",
-      "Increased client retention by 35% and improved average portfolio performance by 12%",
-      "Collaborated with financial advisors to create user-friendly interfaces for complex financial data"
+      "Analyze behavior of 150k+ users to enhance UX, reducing drop-off rate by 12%",
+      "Collaborated with Franklin Templeton to develop recommendation algorithms for 2.2K+ financial advisors"
     ]
   },
   {
@@ -88,13 +87,13 @@ const education = [
     institution: "University of Washington",
     degree: "Master of Science in Information Management",
     period: "2024 - 2025",
-    major: "Data Science and AI"
+    major: "Major: Data Science and AI"
   },
   {
     institution: "Chulalongkorn University",
-    degree: "Bachelor of Science in Finance and Accounting",
+    degree: "Bachelor of Business Administration",
     period: "2015 - 2019",
-    major: "Accounting Information Systems"
+    major: "Major: Finance and Accounting"
   }
 ];
 
