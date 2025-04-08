@@ -58,7 +58,7 @@ const ProjectDetails: React.FC = () => {
                       <img 
                         src={image} 
                         alt={`${project.title} screenshot ${index + 1}`}
-                        className="w-full h-full object-cover"
+                        className="absolute inset-0 w-full h-full object-cover"
                         onError={handleImageError}
                       />
                     </div>
