@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold gradient-text">Patt Chokchainant</h3>
+            <h3 className="text-xl text-cream-400 font-semibold">Patt Chokchainant</h3>
             <p className="text-cream-200 max-w-xs">
             I enjoy sharing and exchanging thoughts with diverse people and perspectives. Insights from different viewpoints often spark the best ideas.
             Feel free to shoot me messages!
@@ -47,7 +47,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-warm-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-cream-400 text-sm">
+          <p className="text-warm-600 text-sm">
             © {currentYear} Pathomporn Chokchainant. All rights reserved.
           </p>
         </div>
