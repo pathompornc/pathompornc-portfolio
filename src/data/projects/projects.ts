@@ -31,8 +31,8 @@ export const projects: Project[] = [
       "Deployed at the country's largest bank for customer support",
       "Reduced response time by 45% while improving accuracy"
     ],
-    toolsMethods: ["LLM Fine-tuning", "RAG", "Data Collection", "API Development", "Salesforce Integration"],
-    industry: "AI/ML, Financial Services",
+    toolsMethods: ["LLM Model Training and Fine-tuning", "API Development", "Salesforce Integration"],
+    industry: "AI/ML",
     reference: "https://opentyphoon.ai",
     images: ["/images/typhoon-logo.png"],
     date: "May 2023 - Present",
@@ -41,10 +41,10 @@ export const projects: Project[] = [
     id: "rag-customer-support",
     title: "RAG-based Customer Support Copilot",
     context: "GenAI integration for customer support in financial services enterprise",
-    tldr: "Created Thailand's largest open-source language model ecosystem, now used by the country's largest bank.",
+    tldr: "Created a proof of concept application that utilizes a fine-tuned LLM to streamline customer support workflows.",
     problemOpportunity: "Thai LLMs lagged behind English models with limited high-quality training data and tools.",
     keyActions: [
-      "Led data collection and curation from diverse Thai language sources",
+      "Integrated LLMs with Salesforce using LangChain for orchestration and Pinecone for vector databases",
       "Coordinated model training and fine-tuning across distributed teams"
     ],
     impact: [
@@ -53,32 +53,31 @@ export const projects: Project[] = [
       "Deployed at the country's largest bank for customer support",
       "Reduced response time by 45% while improving accuracy"
     ],
-    toolsMethods: ["LLM Fine-tuning", "RAG", "Data Collection", "API Development", "Salesforce Integration"],
+    toolsMethods: ["LLM Fine-tuning", "RAG", "Salesforce Integration"],
     industry: "AI/ML, Financial Services",
-    reference: "https://opentyphoon.ai",
-    images: ["/images/typhoon-logo.png"],
+    images: ["/placeholder.svg"],
     date: "Jan - Jun 2024",
   },
   {
     id: "lingthai",
     title: "LingThai",
     context: "Data collection and annotation platform",
-    tldr: "Created Thailand's largest open-source language model ecosystem, now used by the country's largest bank.",
+    tldr: "Created an open registry of publicly available Thai datasets and corpora",
     problemOpportunity: "Thai LLMs lagged behind English models with limited high-quality training data and tools.",
     keyActions: [
       "Led data collection and curation from diverse Thai language sources",
-      "Coordinated model training and fine-tuning across distributed teams"
+      "Fostered partnership and collaboration with academic institutions, universities, and community contributors to create high-quality datasets",
+      "Developed open source platform for high-quality datasets",
+      "Collaborated with linguists to understand challenges and limitation of local dialects to design annotation platform that support those constraints"
     ],
     impact: [
-      "Developed comprehensive ecosystem from data collection to deployment platforms",
-      "Created Thailand's largest open-source language model",
-      "Deployed at the country's largest bank for customer support",
-      "Reduced response time by 45% while improving accuracy"
+      "Curated 100+ publicly available datasets and consolidated into the central platform",
+      "Built data annotation platform used for Thai dialect data collection"
     ],
-    toolsMethods: ["LLM Fine-tuning", "RAG", "Data Collection", "API Development", "Salesforce Integration"],
-    industry: "AI/ML, Financial Services",
-    reference: "https://opentyphoon.ai",
-    images: ["/images/typhoon-logo.png"],
+    toolsMethods: ["Data Collection", "Data Annotation", "Strategic Partnership"],
+    industry: "AI/ML, Data Science",
+    reference: "https://lingthai.ai",
+    images: ["/images/lingthai-logo.png"],
     date: "Feb 2023 - Sep 2024",
   },
   {
@@ -119,7 +118,7 @@ export const projects: Project[] = [
       "Reduce user drop-off rate by 12%"
     ],
     toolsMethods: ["ML Algorithms", "Financial Analysis", "Portfolio Optimization", "User Research"],
-    industry: "FinTech, Wealth Management",
+    industry: "AI/ML, FinTech, Wealth Management, Financial Services",
     reference: "https://www.finnomena.com",
     images: ["/images/finnomena-logo.png"],
     date: "Jul 2021 - Jan 2022",
