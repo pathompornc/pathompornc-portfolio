@@ -36,7 +36,7 @@ export const projects: Project[] = [
     toolsMethods: ["LLM Fine-tuning", "RAG", "Data Collection", "API Development", "Salesforce Integration"],
     industry: "AI/ML, Financial Services",
     reference: "https://github.com/typhoon-ai",
-    images: ["public/typhoon-logo.png"],
+    images: ["/typhoon-logo.png"],
     date: "Jan 2023 - Present",
   },
   {
@@ -58,7 +58,7 @@ export const projects: Project[] = [
     ],
     toolsMethods: ["Prompt Engineering", "UX/UI Design", "Marketplace Development", "Community Building"],
     industry: "AI/ML, Marketplace",
-    images: ["/src/assets/images/prompthub-logo.jpg"],
+    images: ["/prompthub-logo.jpg"],
     date: "Mar 2022 - Dec 2022",
   },
   {
@@ -81,7 +81,7 @@ export const projects: Project[] = [
     toolsMethods: ["ML Algorithms", "Financial Analysis", "Portfolio Optimization", "User Research"],
     industry: "FinTech, Wealth Management",
     reference: "https://www.finnomena.com",
-    images: ["/src/assets/images/finnomena-logo.png"],
+    images: ["/finnomena-logo.png"],
     date: "Jun 2020 - Feb 2022",
   },
   {
@@ -147,7 +147,7 @@ export const projects: Project[] = [
     ],
     toolsMethods: ["Blockchain", "NFT", "No-code Tools", "Creator Economy"],
     industry: "Blockchain, Digital Art",
-    images: ["/src/assets/images/speedboat-logo.png"],
+    images: ["/speedboat-logo.png"],
     date: "Sep 2017 - Feb 2018",
   }
 ]; 

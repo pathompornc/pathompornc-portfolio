@@ -2,13 +2,6 @@
 import React from 'react';
 import { Calendar, Tag } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { 
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
-} from "@/components/ui/carousel";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Project } from '@/data/projects/projects';
@@ -28,24 +21,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     <Card className="group h-full overflow-hidden border-cream-200 hover:border-cream-300 transition-all duration-300">
       <CardHeader className="p-0">
         <div className="relative">
-          <Carousel className="w-full">
-            <CarouselContent>
-              {project.images.map((image, index) => (
-                <CarouselItem key={index}>
-                  <div className="aspect-video relative overflow-hidden">
-                    <img 
-                      src={image} 
-                      alt={`${project.title} screenshot ${index + 1}`}
-                      className="w-full h-full object-cover"
-                      onError={handleImageError}
-                    />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-2" />
-            <CarouselNext className="right-2" />
-          </Carousel>
+          <div className="aspect-video relative overflow-hidden bg-white flex items-center justify-center p-4">
+            <img 
+              src={project.images[0]} 
+              alt={`${project.title} logo`}
+              className="max-h-full object-contain"
+              onError={handleImageError}
+            />
+          </div>
         </div>
       </CardHeader>
       
