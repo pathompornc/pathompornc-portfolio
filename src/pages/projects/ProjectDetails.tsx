@@ -16,6 +16,12 @@ const ProjectDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const project = projects.find(p => p.id === id);
 
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    const target = e.target as HTMLImageElement;
+    target.onerror = null; // Prevent infinite fallback loop
+    target.src = "/placeholder.svg"; // Fallback image
+  };
+
   if (!project) {
     return (
       <div className="min-h-screen pt-24 pb-16 bg-cream-50">
@@ -53,6 +59,7 @@ const ProjectDetails: React.FC = () => {
                         src={image} 
                         alt={`${project.title} screenshot ${index + 1}`}
                         className="w-full h-full object-cover"
+                        onError={handleImageError}
                       />
                     </div>
                   </CarouselItem>

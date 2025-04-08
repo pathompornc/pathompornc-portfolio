@@ -18,6 +18,12 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    const target = e.target as HTMLImageElement;
+    target.onerror = null; // Prevent infinite fallback loop
+    target.src = "/placeholder.svg"; // Fallback image
+  };
+
   return (
     <Card className="group h-full overflow-hidden border-cream-200 hover:border-cream-300 transition-all duration-300">
       <CardHeader className="p-0">
@@ -31,6 +37,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                       src={image} 
                       alt={`${project.title} screenshot ${index + 1}`}
                       className="w-full h-full object-cover"
+                      onError={handleImageError}
                     />
                   </div>
                 </CarouselItem>

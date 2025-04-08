@@ -25,11 +25,18 @@ const FeaturedProjectsSection: React.FC<FeaturedProjectsSectionProps> = ({ proje
             <Link to={project.link} key={project.id} className="block">
               <div className="project-card h-full flex flex-col">
                 <div className="aspect-video bg-gray-200 relative overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                  />
+                  {project.image && (
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.onerror = null;
+                        target.src = "/placeholder.svg"; // Fallback to placeholder if image fails to load
+                      }}
+                    />
+                  )}
                 </div>
                 <div className="p-6 flex-grow flex flex-col">
                   <h3 className="text-xl font-semibold mb-2 text-foreground">{project.title}</h3>
