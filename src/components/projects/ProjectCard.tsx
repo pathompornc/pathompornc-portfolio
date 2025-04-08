@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Calendar, Tag } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -50,6 +51,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <CardTitle className="text-2xl font-bold text-warm-800 mb-3">{project.title}</CardTitle>
         <CardDescription className="text-gray-700 mb-2">{project.context}</CardDescription>
         
+        <div className="mt-3 mb-4">
+          <h4 className="text-sm font-semibold text-warm-600 uppercase mb-1">TL;DR</h4>
+          <p className="text-gray-700">{project.tldr}</p>
+        </div>
+        
         <div className="mt-4">
           <Link 
             to={`/projects/${project.id}`}
@@ -78,16 +84,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </div>
           
           <div>
-            <p className="text-xs text-cream-700 uppercase tracking-wider mb-1.5">Skills & Technologies</p>
+            <p className="text-xs text-cream-700 uppercase tracking-wider mb-1.5">Tools & Methods</p>
             <div className="flex flex-wrap gap-1.5">
-              {project.skills.map((skill, index) => (
+              {project.toolsMethods.map((tool, index) => (
                 <Badge 
                   key={index}
                   variant="outline" 
                   className="bg-warm-50 text-warm-700 border-warm-200 hover:bg-warm-100"
                 >
                   <Tag className="h-3 w-3 mr-1 inline" />
-                  {skill}
+                  {tool}
                 </Badge>
               ))}
             </div>
@@ -98,4 +104,4 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   );
 };
 
-export default ProjectCard; 
+export default ProjectCard;

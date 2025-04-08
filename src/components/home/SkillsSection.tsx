@@ -17,7 +17,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ skills }) => {
             {skills.map((skill, index) => (
               <span 
                 key={index} 
-                className="px-4 py-2 bg-evergreen-50 text-evergreen-700 rounded-full text-sm font-medium"
+                className="px-4 py-2 bg-warm-50 text-warm-700 rounded-full text-sm font-medium"
               >
                 {skill}
               </span>

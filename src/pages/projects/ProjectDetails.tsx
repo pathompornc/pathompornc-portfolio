@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Tag } from 'lucide-react';
 import { projects } from '@/data/projects/projects';
 import { 
   Carousel,
@@ -10,7 +11,6 @@ import {
   CarouselNext,
 } from "@/components/ui/carousel";
 import { Badge } from "@/components/ui/badge";
-import { Tag } from 'lucide-react';
 
 const ProjectDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -69,18 +69,52 @@ const ProjectDetails: React.FC = () => {
 
             <div className="space-y-6">
               <div>
-                <h2 className="text-xl font-semibold text-warm-800 mb-2">Problem</h2>
-                <p className="text-gray-700">{project.problem}</p>
+                <h2 className="text-xl font-semibold text-warm-800 mb-2">TL;DR</h2>
+                <p className="text-gray-700">{project.tldr}</p>
               </div>
 
               <div>
-                <h2 className="text-xl font-semibold text-warm-800 mb-2">Solution</h2>
-                <p className="text-gray-700">{project.solution}</p>
+                <h2 className="text-xl font-semibold text-warm-800 mb-2">Problem/Opportunity</h2>
+                <p className="text-gray-700">{project.problemOpportunity}</p>
               </div>
 
               <div>
-                <h2 className="text-xl font-semibold text-warm-800 mb-2">Results</h2>
-                <p className="text-gray-700">{project.results}</p>
+                <h2 className="text-xl font-semibold text-warm-800 mb-2">Key Actions</h2>
+                <ul className="list-disc pl-5 text-gray-700">
+                  {project.keyActions.map((action, idx) => (
+                    <li key={idx}>{action}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-semibold text-warm-800 mb-2">Team Composition</h2>
+                <p className="text-gray-700">{project.teamComposition}</p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-semibold text-warm-800 mb-2">Impact</h2>
+                <ul className="list-disc pl-5 text-gray-700">
+                  {project.impact.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-semibold text-warm-800 mb-2">Tools & Methods</h2>
+                <div className="flex flex-wrap gap-2">
+                  {project.toolsMethods.map((tool, index) => (
+                    <Badge 
+                      key={index}
+                      variant="outline" 
+                      className="bg-warm-50 text-warm-700 border-warm-200"
+                    >
+                      <Tag className="h-3 w-3 mr-1 inline" />
+                      {tool}
+                    </Badge>
+                  ))}
+                </div>
               </div>
 
               <div>
@@ -98,21 +132,19 @@ const ProjectDetails: React.FC = () => {
                 </div>
               </div>
 
-              <div>
-                <h2 className="text-xl font-semibold text-warm-800 mb-2">Skills & Technologies</h2>
-                <div className="flex flex-wrap gap-2">
-                  {project.skills.map((skill, index) => (
-                    <Badge 
-                      key={index}
-                      variant="outline" 
-                      className="bg-warm-50 text-warm-700 border-warm-200"
-                    >
-                      <Tag className="h-3 w-3 mr-1 inline" />
-                      {skill}
-                    </Badge>
-                  ))}
+              {project.reference && (
+                <div>
+                  <h2 className="text-xl font-semibold text-warm-800 mb-2">Reference</h2>
+                  <a 
+                    href={project.reference} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-warm-700 hover:text-warm-800 underline"
+                  >
+                    {project.reference} <ExternalLink className="h-3.5 w-3.5" />
+                  </a>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>
@@ -121,4 +153,4 @@ const ProjectDetails: React.FC = () => {
   );
 };
 
-export default ProjectDetails; 
+export default ProjectDetails;

@@ -34,7 +34,7 @@ const FeaturedProjectsSection: React.FC<FeaturedProjectsSectionProps> = ({ proje
                 <div className="p-6 flex-grow flex flex-col">
                   <h3 className="text-xl font-semibold mb-2 text-foreground">{project.title}</h3>
                   <p className="text-gray-600 mb-4 flex-grow">{project.description}</p>
-                  <div className="flex items-center text-evergreen-600 font-medium">
+                  <div className="flex items-center text-warm-600 font-medium">
                     View Details <ChevronRight className="h-4 w-4 ml-1" />
                   </div>
                 </div>
