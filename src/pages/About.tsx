@@ -5,7 +5,6 @@ import ProfileSection from '@/components/about/ProfileSection';
 import CertificationsSection from '@/components/about/CertificationsSection';
 import ExperienceSection from '@/components/about/ExperienceSection';
 import EducationSection from '@/components/about/EducationSection';
-import BeyondWorkSection from '@/components/about/BeyondWorkSection';
 import StartupExperienceSection from '@/components/about/StartupExperienceSection';
 
 const certifications = [
@@ -117,9 +116,6 @@ const About: React.FC = () => {
         
         {/* Education Section */}
         <EducationSection education={education} />
-        
-        {/* Beyond Work Section */}
-        <BeyondWorkSection />
       </div>
     </div>
   );

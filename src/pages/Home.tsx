@@ -3,6 +3,7 @@ import React from 'react';
 import HeroSection from '@/components/home/HeroSection';
 import FeaturedProjectsSection from '@/components/home/FeaturedProjectsSection';
 import SkillsSection from '@/components/home/SkillsSection';
+import BeyondWorkSection from '@/components/about/BeyondWorkSection';
 
 const Home: React.FC = () => {
   const skills = [
@@ -28,6 +29,7 @@ const Home: React.FC = () => {
       <HeroSection />
       <FeaturedProjectsSection />
       <SkillsSection skills={skills} />
+      <BeyondWorkSection />
     </div>
   );
 };
