@@ -27,7 +27,7 @@ const App: React.FC = () => {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPost />} />
             <Route path="/404" element={<NotFound />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="*" element={<Navigate to="/404" />} />
           </Routes>
         </div>
         <Footer />

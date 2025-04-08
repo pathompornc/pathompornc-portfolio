@@ -9,6 +9,12 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 const ProfileSection: React.FC = () => {
   const isMobile = useIsMobile();
 
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    const target = e.target as HTMLImageElement;
+    target.onerror = null; // Prevent infinite fallback loop
+    target.src = "/placeholder.svg"; // Fallback image
+  };
+
   return (
     <div className="flex flex-col md:flex-row md:items-center md:gap-12">
       {/* Left Content - For desktop shown first, for mobile shown second */}
@@ -61,12 +67,13 @@ const ProfileSection: React.FC = () => {
       {/* Right Content - Profile Image - For desktop shown second, for mobile shown first */}
       <div className={`${isMobile ? 'order-1' : 'order-2'} w-full md:w-1/3 mb-0`}>
         <div className="relative overflow-hidden rounded-2xl shadow-xl mx-auto" style={{ 
-          maxWidth: isMobile ? '85%' : '100%'
+          maxWidth: isMobile ? '70%' : '80%' // Reduced from 85% to 70% on mobile, and added 80% max-width for desktop
         }}>
           <AspectRatio ratio={2/3} className="w-full">
             <img
               className="w-full h-full object-cover"
               src="/placeholder.svg"
+              onError={handleImageError}
               alt="Profile"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-warm-900/50 to-transparent"></div>
