@@ -76,10 +76,9 @@ const startups = [
     position: "Co-founder & Product Manager",
     period: "2021 - 2023",
     description: [
-      "Co-founded AI-powered recruitment platform connecting tech talent with startups",
-      "Built and scaled the MVP from 0 to 10,000 users in 6 months",
-      "Secured $500K seed funding from prominent angel investors",
-      "Led a team of 5 developers in building the core platform"
+      "Co-founded a no-code NFT platform that enabled creators to generate over $2M in NFT sales volume",
+      "Built and scaled the MVP from 0 to 18,000 users in 6 months",
+      "Led a team of 5 blockchain engineers and product designers in building the core platform"
     ]
   }
 ];
